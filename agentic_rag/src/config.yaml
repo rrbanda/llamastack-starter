@@ -1,0 +1,23 @@
+app:
+  session_name: "rag_session"
+
+llama:
+  base_url: "https://lss-metric.apps.tsisodia-dev.51ty.p1.openshiftapps.com"
+  model_id: "meta-llama/Llama-3.2-3B-Instruct"
+  instructions: "You are a helpful assistant."
+
+vector_db:
+  id: "simple_rag_vdb"
+  provider: "faiss"                  # change if your stack uses milvus/pgvector/etc.
+  embedding: "all-MiniLM-L6-v2"      # dim = 384
+  embedding_dimension: 384
+  chunk_size: 512
+  # provider_vector_db_id: ""        # optional binding to an existing index
+
+sampling:
+  temperature: 0.0
+  top_p: 0.9
+  max_tokens: 2048
+
+query:
+  chunk_template: "Result {index}\nContent: {chunk.content}\nMetadata: {metadata}\n"
