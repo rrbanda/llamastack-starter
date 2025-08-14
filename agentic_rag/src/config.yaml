@@ -2,8 +2,8 @@ app:
   session_name: "rag_session"
 
 llama:
-  base_url: "https://lss-metric.apps.tsisodia-dev.51ty.p1.openshiftapps.com"
-  model_id: "meta-llama/Llama-3.2-3B-Instruct"
+  base_url: "http://lss-ai-agent.apps.cluster-p4mxv.p4mxv.sandbox338.opentlc.com"
+  model_id: "meta-llama/Llama-3.1-8B-Instruct"
   instructions: "You are a helpful assistant."
 
 vector_db:
